@@ -1,5 +1,6 @@
 import 'package:apptaller/pages/pages.dart';
 import 'package:apptaller/provider/photos_provider.dart';
+import 'package:apptaller/provider/users_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,7 +16,8 @@ class AppState extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => PhotosProvider(), lazy: false)
+        ChangeNotifierProvider(create: (context) => PhotosProvider(), lazy: false),
+        // ChangeNotifierProvider(create: (context) => UsersProvider(), lazy: false)
       ],
       child: const MyApp()
     );
@@ -25,7 +27,6 @@ class AppState extends StatelessWidget {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

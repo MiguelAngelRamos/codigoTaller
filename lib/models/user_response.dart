@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:apptaller/models/photo.dart';
 import 'package:apptaller/models/user.dart';
 
 class UsersResponse {
@@ -17,7 +16,7 @@ class UsersResponse {
 
 
 
- factory UsersResponse.toList(List<dynamic> photos) => UsersResponse(
-    results: List<User>.from(photos.map((x) => Photo.fromMap(x)))
+ factory UsersResponse.toList(List<dynamic> user) => UsersResponse(
+    results: List<User>.from(user.map((x) => User.fromMap(x)))
   );
 }
