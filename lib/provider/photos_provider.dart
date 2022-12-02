@@ -8,7 +8,7 @@ class PhotosProvider extends ChangeNotifier {
 
   //* Listas
 
-  List<dynamic> photosResults = [];
+  List<Photo> photosResults = [];
 
   PhotosProvider() {
     getPhotos();

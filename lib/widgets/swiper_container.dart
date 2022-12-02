@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class SwiperContainer extends StatelessWidget {
 
   const SwiperContainer({super.key, required this.photos});
-  final List<dynamic> photos;
+  final List<Photo> photos;
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +33,12 @@ class SwiperContainer extends StatelessWidget {
         itemBuilder: (context, index) {
           final photo = photos[index];
           return GestureDetector(
+           onTap: () => Navigator.pushNamed(context, 'detail', arguments: photo),
            child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: FadeInImage(
               placeholder: const AssetImage('assets/no-image.jpg'),
-              image: NetworkImage(photo['url']+".jpg"),
+              image: NetworkImage(photo.url+".jpg"),
               fit: BoxFit.fill
             )
            ),

@@ -1,4 +1,4 @@
-import 'package:apptaller/pages/home_pages.dart';
+import 'package:apptaller/pages/pages.dart';
 import 'package:apptaller/provider/photos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +33,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: 'home',
       routes: {
-        'home':(context) => const HomePage()
+        'home':(context) => const HomePage(),
+        'detail':(context) => const DetailPage(),
+        'users':(context) => const UsersPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,

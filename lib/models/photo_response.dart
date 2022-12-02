@@ -8,7 +8,8 @@ class PhotosResponse {
     required this.results
   });
 
-  List<dynamic> results;
+  List<Photo> results;
+  // List<Photo> photoResults;
 
   //* factory PhotosResponse.fromJson(String str) => PhotosResponse.fromMap(json.decode(str));
 
@@ -19,8 +20,12 @@ class PhotosResponse {
   // );
 
  factory PhotosResponse.toList(List<dynamic> photos) => PhotosResponse(
-    results: photos
+    results: List<Photo>.from(photos.map((x) => Photo.fromMap(x)))
   );
+
+//  factory PhotosResponse.fromMap(Map<String, dynamic> json) => PhotoResponse(
+//   results: 
+//   );
   // factory PhotosResponse.fromMap(Map<String, dynamic> json) => PhotosResponse(
   //   results: List<Photo>.from(json[].map((x) => Photo.fromMap(x))));
 }
