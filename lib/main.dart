@@ -17,7 +17,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => PhotosProvider(), lazy: false),
-        // ChangeNotifierProvider(create: (context) => UsersProvider(), lazy: false)
+        ChangeNotifierProvider(create: (context) => UsersProvider(), lazy: false)
       ],
       child: const MyApp()
     );
@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         'home':(context) => const HomePage(),
         'detail':(context) => const DetailPage(),
         'users':(context) => const UsersPage(),
+        'detailUsers': ((context) => const DetailsUser())
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,

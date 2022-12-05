@@ -41,7 +41,7 @@ class _PhotoSliderState extends State<PhotoSlider> {
             child: ListView.builder(
               controller: scrollController,
               scrollDirection: Axis.horizontal,
-              itemCount: widget.photos.length - 4800,
+              itemCount: widget.photos.length,
               itemBuilder: (context, index) => _PhotoPoster(photo: widget.photos[index]),
             ),
           )

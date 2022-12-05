@@ -26,7 +26,7 @@ class SwiperContainer extends StatelessWidget {
       width: double.infinity,
       height: size.height * 0.5,
       child: Swiper(
-        itemCount: photos.length - 4900,
+        itemCount: photos.length,
         layout: SwiperLayout.STACK,
         itemWidth: size.width * 0.77,
         itemHeight: size.height * 0.42,

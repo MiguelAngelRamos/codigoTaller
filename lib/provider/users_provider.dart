@@ -29,7 +29,7 @@ Future<String> _getJsonData(String segmentUrl) async {
   //* https://jsonplaceholder.typicode.com/users
 
     getUsers() async {
-    final jsonData = await _getJsonData('/api/character');
+    final jsonData = await _getJsonData('/users');
     print(jsonData);
     print(jsonData is String); //* True
 

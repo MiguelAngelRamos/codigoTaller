@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           // Add a ListView to the drawer. This ensures the user can scroll
   // through the options in the drawer if there isn't enough vertical
   // space to fit everything.
-  child: ListView(
+    child: ListView(
     // Important: Remove any padding from the ListView.
     padding: EdgeInsets.zero,
     children: [
@@ -23,21 +23,21 @@ class HomePage extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.deepPurple,
         ),
-        child: Text('Menu de Usuarios', style: TextStyle(color: Colors.white, fontSize: 20)),
+        child: Text('Menu de Usuarios', style: TextStyle(color: Colors.white, fontSize: 23)),
       ),
       ListTile(
-        title: const Text('Ir a listado de usuarios'),
+        title: const Text('Ir a listado de usuarios', style: TextStyle(fontSize: 17)),
         onTap: () {
           Navigator.pushNamed(context, 'users');
         },
       ),
-      ListTile(
-        title: const Text('Item 2'),
-        onTap: () {
-          // Update the state of the app.
-          // ...
-        },
-      ),
+      // ListTile(
+      //   title: const Text('Item 2'),
+      //   onTap: () {
+      //     // Update the state of the app.
+      //     // ...
+      //   },
+      // ),
     ],
   ),
       ),
